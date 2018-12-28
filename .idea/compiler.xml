@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="admin-model" />
+        <module name="entity-model" />
+        <module name="index" />
+        <module name="repositorty" />
+        <module name="service" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="admin" target="1.7" />
+      <module name="entity" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="admin" options="-parameters" />
+      <module name="admin-model" options="-parameters" />
+      <module name="build" options="-parameters" />
+      <module name="entity" options="-parameters" />
+      <module name="entity-model" options="-parameters" />
+      <module name="index" options="-parameters" />
+      <module name="repositorty" options="-parameters" />
+      <module name="service" options="-parameters" />
+    </option>
+  </component>
+</project>

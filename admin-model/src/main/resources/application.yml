@@ -1,0 +1,18 @@
+spring:
+  output:
+    ansi:
+      enabled: always
+  application:
+    name: admin-model
+  datasource:
+    username: root
+    password: 123456
+    url: jdbc:mysql://127.0.0.1:3306/models?characterEncoding=utf8&useSSL=false&useUnicode=true&serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+    open-in-view: true
+server:
+  port: 8081
