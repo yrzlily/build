@@ -3,7 +3,8 @@ package com.model.adminmodel.controller;
 import com.model.admin.AdminUserRepositorty;
 import com.model.adminmodel.bean.Result;
 import com.model.adminmodel.utils.ResultUtils;
-import com.model.entitymodel.admin.AdminUser;
+import com.model.entitymodel.admin.dto.AdminUserDto;
+import com.model.entitymodel.admin.entity.AdminUser;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
@@ -30,6 +31,16 @@ public class UserController {
     @RequestMapping("/index")
     public List<AdminUser> index(){
         return repositorty.findAll();
+    }
+
+    /**
+     * 查询单个用户
+     * @param id
+     * @return
+     */
+    @GetMapping("/find/{id}")
+    public AdminUserDto find(@PathVariable("id")Integer id){
+        return repositorty.findSome(id);
     }
 
     /**

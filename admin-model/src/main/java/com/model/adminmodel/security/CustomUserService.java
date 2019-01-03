@@ -2,7 +2,7 @@ package com.model.adminmodel.security;
 
 import com.model.admin.AdminUserRepositorty;
 import com.model.adminmodel.bean.SecurityUser;
-import com.model.entitymodel.admin.AdminUser;
+import com.model.entitymodel.admin.entity.AdminUser;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
@@ -11,7 +11,7 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
-import javax.management.relation.Role;
+
 import java.util.ArrayList;
 import java.util.List;
 

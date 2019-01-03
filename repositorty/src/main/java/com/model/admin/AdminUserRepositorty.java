@@ -1,10 +1,12 @@
 package com.model.admin;
 
 
-import com.model.entitymodel.admin.AdminUser;
+import com.model.entitymodel.admin.dto.AdminUserDto;
+import com.model.entitymodel.admin.entity.AdminUser;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import javax.transaction.Transactional;
@@ -52,4 +54,12 @@ public interface AdminUserRepositorty extends JpaRepository<AdminUser , Integer>
     @Modifying
     @Query("update AdminUser as a set a.username = ?1 , a.roleId = ?2 where a.id = ?3")
     void updateNoPass(String username  , Integer roleId , Integer id);
+
+    /**
+     * 查询部分字段
+     * @param id
+     * @return
+     */
+    @Query("select new com.model.entitymodel.admin.dto.AdminUserDto(a.id ,a.username ,a.createTime) from AdminUser a where a.id = ?1")
+    AdminUserDto findSome(Integer id);
 }

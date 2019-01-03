@@ -1,0 +1,3 @@
+com\model\admin\AdminCateRepository.class
+com\model\admin\AdminRoleRepository.class
+com\model\admin\AdminUserRepositorty.class
