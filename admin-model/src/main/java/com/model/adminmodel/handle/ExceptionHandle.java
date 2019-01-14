@@ -1,6 +1,6 @@
 package com.model.adminmodel.handle;
 
-import com.model.adminmodel.utils.ResultUtils;
+import com.model.entitymodel.utils.ResultUtils;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;

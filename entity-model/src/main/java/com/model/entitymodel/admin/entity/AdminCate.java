@@ -1,8 +1,10 @@
 package com.model.entitymodel.admin.entity;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.util.List;
 
 /**
  * @author yrz
@@ -23,4 +25,8 @@ public class AdminCate {
     private Integer parentId;
 
     private Integer sort;
+
+    @JsonInclude(JsonInclude.Include.NON_EMPTY)
+    @Transient
+    private List<AdminCate> list;
 }
